@@ -3,7 +3,7 @@
 ### 使用方法
 1. 添加依赖
 ``` xml
-	<dependencies>
+    <dependencies>
         <dependency>
             <groupId>com.showcup.etl</groupId>
             <artifactId>etl-tools-starter</artifactId>
