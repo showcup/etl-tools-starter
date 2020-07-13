@@ -3,12 +3,11 @@
 ### 使用方法
 1. 添加依赖
 ``` xml
-    <dependencies>
-        <dependency>
-            <groupId>com.showcup.etl</groupId>
-            <artifactId>etl-tools-starter</artifactId>
-        </dependency>
-    </dependencies>    
+    <dependency>
+        <groupId>com.showcup.etl</groupId>
+        <artifactId>etl-tools-starter</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency> 
 ```
 2. 配置数据源
 ``` yaml
