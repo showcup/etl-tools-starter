@@ -1,0 +1,29 @@
+#etl 数据源配置，集中管理诸如rdb(关系型SQL数据库)、mongodb等各种数据源，提供统一简单的工具集进行数据抽取。
+etl: 
+  datasource:
+    rdb-configs:
+      corpInfo:
+        jdbc-url: jdbc:mysql://192.168.11.243:3306/egb?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false
+        username: root
+        password: Zdkx#2020
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        connectionTimeout: 3000 #数据库连接超时时间,默认30秒，即30000
+        maxLifetime: 180000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+        idleTimeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
+        maxPoolSize: 10 #连接池最大连接数，默认是10
+        minIdle: 5 #最小空闲连接数量
+        connectionTestQuery: select 1
+      dstlib:
+        jdbc-url: jdbc:mysql://192.168.11.243:3306/egb-dstlib?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false
+        username: root
+        password: Zdkx#2020
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    mongodb-configs:
+      corpds:
+        host: 192.168.11.243
+        port: 27017
+        username: zdkx
+        password: Zdkx#2020
+        database: egb
+        uri: mongodb://192.168.11.243:27017/test
+    
